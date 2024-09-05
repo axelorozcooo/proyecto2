@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, scale=1.0">
+    <title>Registro Exitoso</title>
+    <style>
+        body {
+            background-image: url("imagenes/fondo.gif");
+            margin: 20px;
+            text-align: center;
+            align-items: center;
+            color: aliceblue;
+        }
+        .container {
+            background-color: aliceblue;
+            width: 70%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 30px;
+            opacity: 0.9;
+            padding: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>REGISTRO EXITOSO, MUCHAS GRACIAS!!!</h1>
+    <div class="container">
+        <p>Nombre: <span id="nombre"></span></p>
+        <p>Dirección: <span id="direccion"></span></p>
+        <p>Teléfono: <span id="telefono"></span></p>
+        <p>Correo Electrónico: <span id="correo"></span></p>
+        <p>Sexo: <span id="sexo"></span></p>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        document.getElementById('nombre').textContent = params.get('nombre');
+        document.getElementById('direccion').textContent = params.get('direccion');
+        document.getElementById('telefono').textContent = params.get('telefono');
+        document.getElementById('correo').textContent = params.get('correo');
+        document.getElementById('sexo').textContent = params.get('sexo');
+    </script>
+</body>
+</html>
